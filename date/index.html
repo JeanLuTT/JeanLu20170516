@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script type="text/javascript" src=""></script>
+        
+                <script>
+                function Button1_onclick() {
+// Set the unit values in milliseconds.
+var msecPerMinute = 1000 * 60;
+var msecPerHour = msecPerMinute * 60;
+var msecPerDay = msecPerHour * 24;
+
+// Set a date and get the milliseconds
+var date = new Date(txt1.value);
+var dateMsec = date.getTime();
+
+// Set the date to January 1, at midnight, of the specified year.
+date.setMonth(0);
+date.setDate(0); //可試試設定值為 1 的結果如何
+date.setHours(0, 0, 0, 0);
+
+// Get the difference in milliseconds.
+var interval = dateMsec - date.getTime();
+
+// Calculate how many days the interval contains. Subtract that
+// many days from the interval to determine the remainder.
+var days = Math.floor(interval / msecPerDay );
+interval = interval - (days * msecPerDay );
+
+// Calculate the hours, minutes, and seconds.
+var hours = Math.floor(interval / msecPerHour );
+interval = interval - (hours * msecPerHour );
+
+var minutes = Math.floor(interval / msecPerMinute );
+interval = interval - (minutes * msecPerMinute );
+
+var seconds = Math.floor(interval / 1000 );
+
+// Display the result.
+txt2.value = (days + " days");
+
+// txt2.value = (days + " days, " + hours + " hours, " + minutes + " minutes, " + seconds + " seconds.");
+
+//Output: 164 days, 23 hours, 0 minutes, 0 seconds.
+
+
+// function Button1_onclick() {
+
+// 		var userName = txt1.value;
+// 		userName = "Hello! " + userName;
+// 		txt2.value = userName;
+}
+            </script>
+        <body>
+        <!--<p id="test"></p>-->
+ 	txt1:
+	<input type="text" id="txt1" name="txt1" value="" PlaceHolder="輸入日期" size="40">
+	<br><br>
+	<input type="button" id="Button1" name="Button1"   
+		value="計算" onclick="Button1_onclick()">
+	<br><br>
+	txt2:
+    <INPUT type="text" id="txt2"  name="txt2" value="" PlaceHolder="計算結果" size="40">
+    <br>
+    <div id="debug"></div>
+        </body>
+    </head>
+</html>

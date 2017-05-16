@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+
+<style>
+#myTransform{
+
+    animation: 6s rot linear infinite;
+    transform-origin:225px 200px;  /*更改原點*/
+}
+@keyframes rot {
+  to {
+    transform: rotate(360deg); 
+  }
+}
+
+
+.start1{
+    width: 400px;
+    height:500px;
+    transform:translate(150px,10px);
+    -moz-transform:translate(150px,10px);
+    -webkit-transform:translate(150px,10px);
+    -o-transform:translate(150px,10px);
+    -ms-transform:translate(150px,10px);
+    transform:translate(150px,10px);
+}
+
+
+.start2{
+    width: 500px;
+    height: 400px;
+    transform:translate(-27px,-320px);
+    -moz-transform:translate(-27px,-320px);
+    -webkit-transform:translate(-27px,-320px);
+    -o-transform:translate(-27px,-320px);
+    -ms-transform:translate(-27px,-320px);
+    transform:translate(-27px,-320px);
+}
+
+
+.start3{
+    transform:rotate(90deg);
+    -moz-transform:rotate(90deg);
+    -webkit-transform:rotate(90deg);
+    -o-transform:rotate(90deg);
+    -ms-transform:rotate(90deg);
+    transform:rotate(90deg);
+}
+
+</style>
+
+
+
+</head>
+
+
+<body>
+
+<h2>陣列練習</h2>
+
+
+
+<div id="myTransform">
+<div id = "start1"
+    class = "start1"
+    style="color:#0000FF" >
+<script>
+var fruits = new Array();
+for(i=0;i<10;i++){  //行
+　fruits[i]="*";
+  
+　
+
+    for(var k=1;k<i+1;k++){ 
+
+        
+        document.write("&nbsp&nbsp"); //要使用2個空格
+} 
+    for(var m=0;m<=(18-3*i)+i;m++){
+        document.write(fruits[i]);
+}
+    document.write("<br/>"); }
+
+
+
+var fruits = new Array();
+for(i=0;i<10;i++){  
+　fruits[i]="*";
+  
+　
+
+    for(var k=0;k<10-i-1;k++){ 
+
+        
+        document.write("&nbsp&nbsp");
+} 
+    for(var j=0;j<=(2*i-1)+1;j++){
+        document.write(fruits[i]);
+}
+    document.write("<br/>"); }
+
+</script>
+</div>
+
+<div id = "start2"
+    class = "start2"
+    style="color:#0000FF" >
+    <div id="start3" class= "start3">
+<script>
+var fruits = new Array();
+for(i=0;i<10;i++){  
+　fruits[i]="*";
+  
+　
+
+    for(var k=1;k<i+1;k++){ 
+
+        
+        document.write("&nbsp&nbsp"); 
+} 
+    for(var m=0;m<=(18-3*i)+i;m++){
+        document.write(fruits[i]);
+}
+    document.write("<br/>"); }
+
+
+
+var fruits = new Array();
+for(i=0;i<10;i++){  
+　fruits[i]="*";
+  
+　
+
+    for(var k=0;k<10-i-1;k++){ 
+
+        
+        document.write("&nbsp&nbsp"); 
+} 
+    for(var j=0;j<=(2*i-1)+1;j++){
+        document.write(fruits[i]);
+}
+    document.write("<br/>"); }
+
+</script>
+</div>
+</div>
+</div>
+
+
+
+
+
+</body>
+
+</html>
